@@ -1,0 +1,59 @@
+﻿@model BlogProject.MVC.Areas.Admin.Models.UserModels.UserWithRolesViewModel
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <div class="sb-sidenav-menu-heading">Menu</div>
+                <a class="nav-link" asp-area="Admin" asp-controller="Home" asp-action="Index">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Management Panel
+                </a>
+                <div class="sb-sidenav-menu-heading">Contents</div>
+                <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">
+                    <div class="sb-nav-link-icon"><i class="fas fa-th-list"></i></div>
+                    Categories
+                </a>
+                <a class="nav-link" asp-area="Admin" asp-controller="Article" asp-action="Index">
+                    <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                    Articles
+                </a>
+                <a class="nav-link" asp-area="Admin" asp-controller="Comment" asp-action="Index">
+                    <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
+                    Comments
+                </a>
+                <div class="sb-sidenav-menu-heading">Users</div>
+                @if (Model.Roles.Any(r => r.Equals("SuperAdmin") || r.Equals("Role.Read")))
+                {
+                    <a class="nav-link" asp-area="Admin" asp-controller="Role" asp-action="Index">
+                        <div class="sb-nav-link-icon"><i class="fas fa-user-shield"></i></div>
+                        Roles
+                    </a>
+                }
+                @if (Model.Roles.Any(r => r.Equals("SuperAdmin") || r.Equals("User.Read")))
+                {
+                    <a class="nav-link" asp-area="Admin" asp-controller="User" asp-action="Index">
+                        <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                        Users
+                    </a>
+                }
+                <div class="sb-sidenav-menu-heading">Other</div>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
+                    Archive
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="DeletedCategories">Categories</a>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Article" asp-action="DeletedArticles">Articles</a>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Comment" asp-action="DeletedComments">Comments</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="sb-sidenav-footer">
+            <div class="small">Logged in as:</div>
+            @Model.User.UserName
+        </div>
+    </nav>
+</div>

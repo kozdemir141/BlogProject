@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogProject.Services\BlogProject.Services.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+    <None Remove="Models\" />
+    <None Remove="Views\" />
+    <None Remove="Controllers\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="Views\Home\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Models\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\Views\Category\" />
+    <None Remove="Areas\Admin\Views\User\" />
+    <None Remove="AutoMapper" />
+    <None Remove="AutoMapper\" />
+    <None Remove="AutoMapper\Profiles\" />
+    <None Remove="Areas\Admin\Models\User\" />
+    <None Remove="Areas\Admin\ViewComponents\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\AdminMenu\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\UserMenu\" />
+    <None Remove="Helpers\" />
+    <None Remove="Helpers\Abstract\" />
+    <None Remove="Helpers\Concrete\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Areas\Admin\Views\Article\" />
+    <None Remove="Areas\Admin\Models\ArticleModels\" />
+    <None Remove="NToastNotify" />
+    <None Remove="Areas\Admin\Models\CommentModels\" />
+    <None Remove="Areas\Admin\Views\Comment\" />
+    <None Remove="Areas\Admin\Views\Auth\" />
+    <None Remove="Areas\Admin\Views\Role\" />
+    <None Remove="Areas\Admin\Models\RoleModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.0" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="NToastNotify" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="Areas\Admin\Views\User\" />
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="AutoMapper\Profiles\" />
+    <Folder Include="Areas\Admin\Models\UserModels\" />
+    <Folder Include="Areas\Admin\ViewComponents\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Helpers\Abstract\" />
+    <Folder Include="Helpers\Concrete\" />
+    <Folder Include="wwwroot\img\userImages\" />
+    <Folder Include="wwwroot\img\postImages\" />
+    <Folder Include="wwwroot\ComingSoon\" />
+    <Folder Include="wwwroot\AdminLTE\" />
+    <Folder Include="wwwroot\AdminLTE\assets\" />
+    <Folder Include="wwwroot\AdminLTE\css\" />
+    <Folder Include="wwwroot\AdminLTE\js\" />
+    <Folder Include="Areas\Admin\Views\Article\" />
+    <Folder Include="Areas\Admin\Models\ArticleModels\" />
+    <Folder Include="Areas\Admin\Models\CommentModels\" />
+    <Folder Include="Areas\Admin\Views\Comment\" />
+    <Folder Include="Areas\Admin\Views\Auth\" />
+    <Folder Include="Areas\Admin\Views\Role\" />
+    <Folder Include="Areas\Admin\Models\RoleModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\img\" />
+    <Content Remove="wwwroot\img\userImages\" />
+    <Content Remove="wwwroot\img\postImages\" />
+    <Content Remove="wwwroot\ComingSoon\" />
+    <Content Remove="wwwroot\AdminLTE\" />
+    <Content Remove="wwwroot\AdminLTE\assets\" />
+    <Content Remove="wwwroot\AdminLTE\css\" />
+    <Content Remove="wwwroot\AdminLTE\js\" />
+  </ItemGroup>
+</Project>

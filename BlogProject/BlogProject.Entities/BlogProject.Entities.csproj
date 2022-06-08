@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Concrete\" />
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\Article\" />
+    <None Remove="Dtos\ArticleDtos\" />
+    <None Remove="Microsoft.Extensions.Identity.Stores" />
+    <None Remove="Dtos\UserDtos\" />
+    <None Remove="ComplexTypes\" />
+    <None Remove="Dtos\CommentDtos\" />
+    <None Remove="Dtos\RoleDtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\ArticleDtos\" />
+    <Folder Include="Dtos\UserDtos\" />
+    <Folder Include="ComplexTypes\" />
+    <Folder Include="Dtos\CommentDtos\" />
+    <Folder Include="Dtos\RoleDtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlogProject.Shared\BlogProject.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.0" />
+  </ItemGroup>
+</Project>

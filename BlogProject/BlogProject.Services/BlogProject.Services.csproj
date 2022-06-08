@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogProject.Data\BlogProject.Data.csproj" />
+    <ProjectReference Include="..\BlogProject.Entities\BlogProject.Entities.csproj" />
+    <ProjectReference Include="..\BlogProject.Shared\BlogProject.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Abstract\" />
+    <None Remove="Concrete\" />
+    <None Remove="Constants\" />
+    <None Remove="AutoMapper\" />
+    <None Remove="AutoMapper" />
+    <None Remove="AutoMapper\Profiles\" />
+    <None Remove="Extensions\" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
+    <Folder Include="Constants\" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="AutoMapper\Profiles\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+  </ItemGroup>
+</Project>

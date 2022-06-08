@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Entities\Abstract\" />
+    <None Remove="Data\" />
+    <None Remove="Data\Abstract\" />
+    <None Remove="Data\Concrete\" />
+    <None Remove="Data\Concrete\EntityFramework\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="MySql.EntityFrameworkCore" />
+    <None Remove="Utilities\" />
+    <None Remove="Utilities\Results\" />
+    <None Remove="Utilities\Results\Abstract\" />
+    <None Remove="Utilities\Results\Concrete\" />
+    <None Remove="Utilities\Results\ComplexTypes\" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Core" />
+    <None Remove="Utilities\Extensions\" />
+    <None Remove="Microsoft.AspNetCore.Mvc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\Abstract\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\Abstract\" />
+    <Folder Include="Data\Concrete\" />
+    <Folder Include="Data\Concrete\EntityFramework\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Utilities\Results\" />
+    <Folder Include="Utilities\Results\Abstract\" />
+    <Folder Include="Utilities\Results\Concrete\" />
+    <Folder Include="Utilities\Results\ComplexTypes\" />
+    <Folder Include="Utilities\Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.13" />
+  </ItemGroup>
+</Project>
